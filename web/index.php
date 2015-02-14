@@ -25,7 +25,7 @@ $app->post('/data_bag/decrypt', function () use ($app) {
   $response = new Phalcon\Http\Response();
   $response->setHeader("Content-Type", "application/json");
   $response->setStatusCode(200, "OK");
-  $response->setContent(" $dec_databag");
+  $response->setContent("$dec_databag");
   $response->send();
 
 });
