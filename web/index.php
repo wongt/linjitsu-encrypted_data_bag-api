@@ -1,6 +1,11 @@
 <?php
 
+#Load paths
 require_once "paths.php";
+
+#Load configuration file
+require_once PATH_CONFIGS;
+
 
 define( 'PID', getmypid() );
 define( 'TMPFILE', "/dev/shm/" . PID . ".json" );
