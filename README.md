@@ -23,7 +23,7 @@ Usage
 
 Encrypt:
 ```
-curl -X POST -H "Content-Type: application/json" --data-binary @decrypted.json http://4.4.4.22/data_bag/encrypt 
+curl -X POST -H "Content-Type: application/json" --data @decrypted.json http://4.4.4.22/data_bag/encrypt 
 ```
 
 <pre><code>
@@ -52,7 +52,7 @@ curl -X POST -H "Content-Type: application/json" --data-binary @decrypted.json h
 
 Decrypt:
 ```
-curl -X POST -H "Content-Type: application/json" --data-binary @encrypted.json http://4.4.4.22/data_bag/decrypt
+curl -X POST -H "Content-Type: application/json" --data @encrypted.json http://4.4.4.22/data_bag/decrypt
 ```
 <pre><code>
 {
