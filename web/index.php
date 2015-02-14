@@ -7,9 +7,6 @@ require_once "paths.php";
 require_once PATH_CONFIGS;
 
 
-define( 'PID', getmypid() );
-define( 'TMPFILE', "/dev/shm/" . PID . ".json" );
-
 $app = new Phalcon\Mvc\Micro();
 
 $app->post('/data_bag/decrypt', function () use ($app) {
