@@ -1,6 +1,6 @@
 Encrypted Data Bag API
 =================
-The intention of this API is to able to dynamically encrypt/decrypt Chef data bags without needing to install chef-client. 
+The intention of this API is to dynamically encrypt/decrypt Chef data bags without needing to install chef-client. 
 
 Pre-Requisites
 -----------
@@ -73,3 +73,10 @@ curl -X POST -H "Content-Type: application/json" --data @encrypted.json http://4
   }
 }
 </pre></code>
+
+TODO
+-----------
+
+* Add authentication
+* Add multi key 
+* Add possibility to pass secret key with encrypted/decrypted databag
