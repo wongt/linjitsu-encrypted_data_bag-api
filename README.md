@@ -13,9 +13,14 @@ Pre-Requisites
 Installation
 -----------
 
-
-
-In order to fully use the following API you will need either a Chef (https://www.chef.io/account/login) account or have a chef server.
+1. Insert your client key in DOCUMENT_ROOT/../.chef/client.pem 
+2. Insert your secret key in DOCUMENT_ROOT/../.chef/encrypted_data_bag_secret
+3. Modify knife.rb in DOCUMENT_ROOT/../.chef/knife.rb. 
+```
+node_name	'node_name'
+client_key	'/var/www/html/.chef/client.pem'
+chef_server_url	'https://api.opscode.com/organizations/ORG'
+```
 
 
 Usage
