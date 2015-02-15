@@ -15,6 +15,8 @@ $app->post('/data_bag/decrypt', function () use ($app) {
   $status_code='200';
   $status_message='OK';
 
+  $response = new Phalcon\Http\Response();
+
   $databag = json_encode($app->request->getJsonRawBody());
 
   try
