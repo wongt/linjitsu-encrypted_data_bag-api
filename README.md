@@ -6,7 +6,7 @@ Pre-Requisites
 -----------
 
 * Apache 2.2.15+
-* PHP 5.6.5+
+* PHP 5.4.37+
 * Phalcon 1.3.4+
 * Chef 11.10.4+
 
