@@ -1,6 +1,7 @@
 Encrypted Data Bag API
 =================
 The intention of this API is to dynamically encrypt/decrypt Chef data bags without needing to install chef-client. 
+Simplyfing continuous integration when data bags require to change often during development. 
 
 Pre-Requisites
 -----------
