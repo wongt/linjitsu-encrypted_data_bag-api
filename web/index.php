@@ -9,6 +9,31 @@ require_once PATH_CONFIGS;
 
 $app = new Phalcon\Mvc\Micro();
 
+$app->post('/token/generate', function() use ($app) {
+  $token = "";
+  $status_code='200';
+  $status_message='OK';
+  $response = new Phalcon\Http\Response();
+
+  if ( strcmp( $app->request->getPost("secret"), SECRET ) == 0 ) 
+  {
+    $token = shell_exec('uuidgen | sed -e s/-//g');
+
+    exec("touch /dev/shm/" . $token, $empty, $retval );
+  }
+  else 
+  {
+    $status_code='409';    
+    $status_message='AUTH FAILED';
+    $token = "Access Denied.\n";
+  }
+ 
+  // Prepare Response
+  $response->setStatusCode($status_code, $status_message);
+  $response->setContent($token);
+  $response->send();
+});
+
 $app->post('/data_bag/decrypt', function () use ($app) {
 
   $enc_databag = "";
